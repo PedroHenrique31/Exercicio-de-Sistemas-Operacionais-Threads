@@ -6,5 +6,11 @@ package ImpementandoRunnable;
  * contagem, informe quantas vezes a thread entrou em suspensão.
  */
 public class PrincipalRunnable {
-
+	public static void main(String[] args) {
+		System.out.println("Iniciando sem o uso de Thread, apenas na main");
+		Contador.conta();
+		Contador counter=new Contador("Minha thread #2");
+		Thread t1=new Thread(counter);
+		t1.start();
+	}
 }
